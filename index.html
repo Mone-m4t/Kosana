@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ບໍລິການໂຄສະນາທີ່ເຊື່ອຖືໄດ້ ແລະ ທັນສະໄໝ ສຳລັບການສ້າງອະນາຄົດແລະສຸຂະພາບທີ່ດີ. ຕິດຕໍ່ພວກເຮົາຜ່ານ WhatsApp ມື້ນີ້!">
+    <meta name="keywords" content="ໂຄສະນາ, ສຸຂະພາບ, ຄວາມງາມ, ໂອກາດທຸລະກິດ, ລາວ, The happiness">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="ເອັມໂຟຣທີ ອອນລາຍ">
+    <meta property="og:title" content="ບໍລິການໂຄສະນາ - The Happiness">
+    <meta property="og:description" content="ບໍລິການໂຄສະນາທີ່ສະໜອງຂໍ້ມູນຈິງ ແລະ ເຊື່ອຖືໄດ້ ເພື່ອສ້າງອະນາຄົດແລະສຸຂະພາບທີ່ດີ.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <title>ບໍລິການໂຄສະນາ - The Happiness</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #dbeafe;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero .container {
+            max-width: 800px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: #10b981;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #059669;
+            transform: scale(1.05);
+        }
+
+        /* Section */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: #3b82f6;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            loading: lazy;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #1a202c;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #4b5563;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #3b82f6;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .contact .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-top: 1.5rem;
+            background: #25D366;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact a:hover {
+            background: #1ebd56;
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.5rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: #2563eb;
+            transform: translateY(-5px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #3b82f6;
+                width: 100%;
+                padding: 20px;
+                display: none;
+                z-index: 1000;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .menu-toggle {
+                display: block;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>ບໍລິການໂຄສະນາ</h1>
+            <div class="menu-toggle" aria-label="Toggle navigation">☰</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">ໜ້າຫຼັກ</a></li>
+                    <li><a href="#tips">ໂຄສະນາທັງໝົດ</a></li>
+                    <li><a href="#services">ບໍລິການ</a></li>
+                    <li><a href="#contact">ຕິດຕໍ່</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>ບໍລິການໂຄສະນາ</h2>
+                <p>ທີ່ສະໜອງຂໍ້ມູນຈິງ ແລະ ເຊື່ອຖືໄດ້</p>
+                <p>ລາຍລະອຽດຢູ່ດ້ານລຸ້ມ ທ່ານສາມາດເລື່ອນເບິ່ງໂຄສະນາໄດ້ຢ່າງສະບາຍ</p>
+                <a href="#contact" class="cta-button">ຕິດຕໍ່ພວກເຮົາ</a>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section id="tips">
+            <h2>ລາຍການໂຄສະນາ</h2>
+            <div class="card-container">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="ບ້ານທີ່ສວຍງາມສຳລັບຄວາມຝັນໃນອະນາຄົດ" loading="lazy">
+                    <div class="card-content">
+                        <h3>ຄວາມຝັນໃນອະນາຄົດ</h3>
+                        <p>ໃນເມື່ອທຸກຄົນລ້ວນມີຄວາມຝັນ ແຕ່ສິງເຫຼົ່ານັ້ນມັນຍາກໃນປັດຈຸບັນ, ແຕ່ມື້ນີ້ເອົາມີໂອກາດບໍລິສັດ The happiness ກຳລັງເປີດໂອກາດໃຫ້ທຸກຄົນມາຮ່ວມສ້າງຄວາມຝັນໄປດ້ວຍກັນ ໃຊ້ທຶນພຽງ1,689ບາດ ສາມາດປ່ຽນອານາຄົດເຮົາໄດ້ ສົນໃຈຕິດຕໍ່ WhatsApp: 02097870611.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://i.postimg.cc/sXpcp3H0/Screenshot-20250506-113033-2.png" alt="ຜະລິດຕະພັນ Astralus ສຳລັບສຸຂະພາບແລະຄວາມງາມ" loading="lazy">
+                    <div class="card-content">
+                        <h3>ໂພຊະນາການ</h3>
+                        <p>ຜະລິດຕະພັນ Astralus ເປັນຜະລິດຕະພັນດູແລສຸຂະພາບແລະຄວາມງາມທີ່ຊ່ວຍຊະລໍຄວາມແກ່, ປົກປ້ອງຜິວໜັງ, ແລະເສີມສ້າງຄວາມແຂງແຮງຂອງຮ່າງກາຍ. ມັນມີຄຸນປະໂຫຍດດັ່ງນີ້:<br>
+                        - ປ້ອງກັນຜິວຈາກຄວາມແກ່ກ່ອນໄວ<br>
+                        - ຟື້ນຟູຜິວໜັງໃຫ້ຊຸ່ມຊື່ນ ແລະ ມີສຸຂະພາບດີ<br>
+                        - ຊ່ວຍໃຫ້ຜິວສົດໃສ, ລຽບນຽນ, ແລະມີຄວາມຍືດຫຍຸ່ນ<br>
+                        - ສົ່ງເສີມສຸຂະພາບຕາ ແລະ ປ້ອງກັນບັນຫາສາຍຕາ<br>
+                        - ຊ່ວຍຍືດອາຍຸຂອງເຊລລ໌ໃນຮ່າງກາຍ (ອີງຕາມແນວຄວາມຄິດຂອງ Telomere)<br>
+                        ຜະລິດຕະພັນນີ້ໄດ້ຮັບການຄົ້ນຄວ້າແລະພັດທະນາໂດຍ TeloAge, ສະຖາບັນທີ່ມີຊື່ສຽງໃນການຄົ້ນຄວ້າດ້ານການຊະລໍຄວາມແກ່.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://i.postimg.cc/fLy5GRXr/image-2.jpg" alt="ການອອກກຳລັງກາຍສຳລັບສຸຂະພາບທີ່ດີ" loading="lazy">
+                    <div class="card-content">
+                        <h3>ການອອກກຳລັງກາຍ ແລະ ດູແລສຸຂະພາບ</h3>
+                        <p>ການອອກກຳລັງກາຍ ແລະ ການດູແລຮ່າງກາຍໃຫ້ແຂງແຮງ ຕ້ອງເນັ້ນໃສ່ 3 ຈຸດຫຼັກ:<br>
+                        1. ອອກກຳລັງກາຍປະຈຳ: ຝຶກແບບມີແຜນ, ລວມທັງການຍົກນ້ຳໜັກ, ຄາດິໂອ, ແລະ ຍືດເສັ້ນ.<br>
+                        2. ໂພຊະນາການ: ກິນອາຫານທີ່ມີໂປຣຕີນສູງ, ຄາໂບໄຮເດຣດດີ, ແລະ ໄຂມັນດີ.<br>
+                        3. ພັກຜ່ອນໃຫ້ພຽງພໍ: ນອນຫຼັບ 7-8 ຊົ່ວໂມງ/ມື້ ແລະ ຫຼີກລ່ຽງຄວາມຄຽດ.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <h2>ບໍລິການຂອງພວກເຮົາ</h2>
+            <div class="card-container">
+                <article class="card">
+                    <img src="https://i.postimg.cc/gj4MRMXX/Screenshot-20250506-114933-3.png" alt="ໂອກາດທຸລະກິດກັບ The Happiness" loading="lazy">
+                    <div class="card-content">
+                        <h3>ໂອກາດດີໆສ້າງອະນາຄົດໝັ້ນຄົງ</h3>
+                        <p>The Happiness ເປີດໂອກາດໃຫ້ທຸກຄົນເປັນເຈົ້າຂອງສ້າງແອັບໄທປັນ ແລະ ມີໂອກາດຖືຫຸ້ນພາ. ພິເສດສະໝັກສະມາຊິກມື້ນີ້ ພຽງ 1,689 ບາດ ທ່ານຈະໄດ້ຮັບສິນຄ້າດູແລສຸຂະພາບຟຣີ. ຕິດຕໍ່ WhatsApp: 02097870611.</p>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://i.postimg.cc/15S0Zx7y/Picsart-25-05-11-18-12-15-414.jpg" alt="ຜະລິດຕະພັນດູສຸຂະພາບແລະຄວາມງາມ" loading="lazy">
+                    <div class="card-content">
+                        <h3>ຜະລິດຕະພັນສຸຂະພາບ</h3>
+                        <p>ຍາສີຟັນ, ໂລຊັນ, ຄຣີມອາບນ້ຳ, ໂຟມລ້າງໜ້າ, ກາແຟບຳລຸງສຸຂະພາບ, Astralus, ແລະອື່ນໆ. ສິນຄ້າຄຸນນະພາບດີ ປອດໄພ ພ້ອມເງິນຄືນ. ສົນໃຈຕິດຕໍ່ WhatsApp: 02097870611.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>ຕິດຕໍ່ພວກເຮົາ</h2>
+                <p>ມີຄຳຖາມ ຫຼື ສົນໃຈລົງໂຄສະນາ ຕິດຕໍ່ພວກເຮົາຜ່ານ WhatsApp ດຽວນີ້!</p>
+                <a href="https://wa.me/8562097870611?text=ສະບາຍດີ! ຂ້ອຍມາຈາກ ເວັບໄຊ ບໍລິການໂຄສະນາ🥳" target="_blank" rel="noopener">ຕິດຕໍ່ຜ່ານ WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 ເອັມໂຟຣທີ ອອນລາຍ. ສະຫງວນລິຂະສິດ</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <script defer>
+        // Menu Toggle for Mobile
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Back to Top Button
+        const backToTop = document.querySelector('.back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // Structured Data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "ບໍລິການໂຄສະນາ - The Happiness",
+            "url": "https://yourwebsite.com",
+            "logo": "https://yourwebsite.com/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+8562097870611",
+                "contactType": "Customer Service",
+                "areaServed": "LA",
+                "availableLanguage": "Lao"
+            },
+            "sameAs": [
+                "https://wa.me/8562097870611"
+            ]
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>
